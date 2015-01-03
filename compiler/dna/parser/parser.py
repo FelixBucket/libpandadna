@@ -919,8 +919,4 @@ def p_font(p):
 p_font.__doc__ = '''\
 font : STORE_FONT "[" string string string "]"'''
 
-def p_error(p):
-    if p is None:
-        raise DNAError('Syntax error unexpected EOF')
-    raise DNAError('Syntax error at line ' + str(p.lexer.lineno) + ' token=' + str(p))
-    
+
